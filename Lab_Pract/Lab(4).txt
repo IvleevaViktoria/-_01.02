@@ -1,0 +1,40 @@
+//Лаб4
+//Найти сумму положительных элементов одномерного массива.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            // Нахождение суммы положительных элементов массива
+
+
+            Console.Write("Введите размер массива: ");
+            int n = Convert.ToInt32(Console.ReadLine()); // вводим размер массива с клавиатуры
+            
+            int[] arr = new int[n]; // создаем массив указанного размера
+            int sum = 0; // переменная для хранения суммы положительных элементов
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("Введите элемент {0}: ", i);
+                arr[i] = int.Parse(Console.ReadLine()); // вводим элемент с клавиатуры
+                if (arr[i] > 0) // если элемент положительный
+                {
+                    sum += arr[i]; // добавляем его к сумме
+                }
+            }
+            Console.WriteLine("Сумма положительных элементов: " + sum); // выводим сумму
+
+            Console.ReadKey();
+        }
+    }
+}

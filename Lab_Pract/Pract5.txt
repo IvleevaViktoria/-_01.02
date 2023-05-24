@@ -1,0 +1,58 @@
+//Практ5
+//Найти в тексте слово, содержащее наибольшее количество букв «м».
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pr5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите текст:");
+
+            // Считываем текст из консоли
+            string text = Console.ReadLine();
+
+            // Разделяем текст на слова
+            string[] words = text.Split(new[] { ' ', ',', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+
+            int maxMCount = 0; // Максимальное количество букв м
+            string wordWithMaxMCount = null; // Слово с максимальным количеством букв м
+
+            foreach (string word in words)
+            {
+                int mCount = 0;
+
+                foreach (char c in word)
+                {
+                    if (c == 'м')
+                    {
+                        mCount++;
+                    }
+                }
+
+                if (mCount > maxMCount)
+                {
+                    maxMCount = mCount;
+                    wordWithMaxMCount = word;
+                }
+            }
+
+            if (wordWithMaxMCount == null)
+            {
+                Console.WriteLine("В тексте нет слов с буквами 'м'");
+            }
+            else
+            {
+                Console.WriteLine($"Слово с наибольшим количеством букв 'м': {wordWithMaxMCount}");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+

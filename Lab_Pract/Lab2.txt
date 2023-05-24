@@ -1,0 +1,158 @@
+//Лаб2
+//Вводится цифра. Ответить названием геометрического объекта с указанным количеством вершин.
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+
+{
+
+internal class Program
+
+{
+
+static void Main(string[] args)
+
+{
+
+
+
+Console.WriteLine("Введите цифру от 0-10 включительно");
+int a = Convert.ToInt32(Console.ReadLine());
+if (a == 0)
+
+{
+
+Console.WriteLine("Геометрические объекты с 0 вершин -> ");
+
+Console.WriteLine("КРУГ");
+
+}
+
+else if(a == 1)
+
+{
+
+Console.WriteLine("Геометрические объекты с 1 вершиной -> ");
+
+Console.WriteLine("КОНУС");
+
+}
+
+else if(a == 2)
+
+{
+
+Console.WriteLine("Геометрические объекты с 2 вершинами -> ");
+
+Console.WriteLine("ОТРЕЗОК");
+
+}
+
+else if(a == 3)
+
+{
+
+Console.WriteLine("Геометрические объекты с 3 вершинами -> ");
+
+Console.WriteLine("ТРЕУГОЛЬНИК");
+
+}
+
+else if(a == 4)
+
+{
+
+Console.WriteLine("Геометрические объекты с 4 вершинами -> ");
+
+Console.WriteLine("ЧЕТЫРЕХУГОЛЬНИК");
+
+Console.WriteLine("КВАДРАТ");
+
+Console.WriteLine("ПРЯМОУГОЛЬНИК");
+
+}
+
+else if(a == 5)
+
+{
+
+Console.WriteLine("Геометрические объекты с 5 вершинами -> ");
+
+Console.WriteLine("ПЕНТАЭДРОИД/ПЯТИГРАННИК");
+
+}
+
+else if(a == 6)
+
+{
+
+Console.WriteLine("Геометрические объекты с 6 вершинами -> ");
+
+Console.WriteLine("ТРЕУГОЛЬНАЯ ПРИЗМА");
+
+}
+
+else if(a == 7)
+
+{
+
+Console.WriteLine("Геометрические объекты с 7 вершинами -> ");
+
+Console.WriteLine("СЕМИУГОЛЬНИК");
+
+}
+
+else if(a == 8)
+
+{
+
+Console.WriteLine("Геометрические объекты с 8 вершинами -> ");
+
+Console.WriteLine("КУБ");
+
+}
+
+else if(a == 9)
+
+{
+
+Console.WriteLine("Геометрические объекты с 9 вершинами -> ");
+
+Console.WriteLine("ДЕВЯТИУГОЛЬНИК");
+
+}
+
+else if(a == 10)
+
+{
+
+Console.WriteLine("Геометрические объекты с 10 вершинами -> ");
+
+Console.WriteLine("ПРИЗМА");
+
+}
+
+else
+
+{
+
+Console.WriteLine("Число задано не по условию!");
+
+}
+
+Console.ReadKey(true);
+Console.ReadKey();
+
+}
+
+}
+
+}

@@ -1,0 +1,61 @@
+//Лаб5
+//(по особому запросу) -> Для лифта выбор этажей 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lift05
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Выбор этажей для лифта");
+            int Floor = 1;
+            int ChoseFloor;
+
+
+            Console.WriteLine("Итак, вы находитесь на этаже номер " + Floor);
+            Console.WriteLine("Выберите этаж: ");
+            string input = Console.ReadLine();
+
+            if (!int.TryParse(input, out ChoseFloor))
+            {
+                Console.WriteLine("ОШИБКА!Введите дрвугое число");
+
+            }
+            else if (ChoseFloor < 1 || ChoseFloor > 10)
+            {
+                Console.WriteLine("Введите число от 1 до 10");
+            }
+
+            else
+            {
+                Console.WriteLine("Вы отправляетесь на этаж номер" + ChoseFloor);
+            }
+
+            //движение лифта на выбранный
+            if (ChoseFloor > Floor)
+            {
+                for (int i = Floor + 1; i <= ChoseFloor; i++)
+                {
+                    Console.WriteLine("Движение лифта на этаж номер " + i);
+                }
+            }
+
+            else if (ChoseFloor < Floor)
+            {
+                for (int i = Floor - 1; i <= ChoseFloor; i--)
+                {
+                    Console.WriteLine("Движение лифта на этаж номер " + i);
+                }
+            }
+
+            Console.WriteLine("Лифт прибыл на этаж номер " + ChoseFloor);
+            Console.ReadLine();
+        }
+    }
+}
+

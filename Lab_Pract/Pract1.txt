@@ -1,0 +1,65 @@
+//Практ1
+//Уравнение
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Решение уравнения");
+            //ввод данных
+
+            double a ;
+            double b ;
+            double c ;
+            double d ;
+            double e ;
+            double f ;
+            double g ;
+
+            a = (34.06 - 33.81) * 4;
+
+            b = (28.57-25.15);
+            double result = Math.Pow(b, 5);
+            result = Math.Sqrt(b);//извлекаем корень
+
+
+            c = (a / 6.84 / b);
+
+            d = ((3 + 4.2 / 0.1) / (1 / 0.3 - 2.7) / 4.12);
+            double result0 = Math.Pow(d, 2);
+            result0 = Math.Sqrt(d);//извлекаем корень
+
+            e = c - d;
+            double result1 = Math.Pow(e, 7);
+            result1 = Math.Sqrt(e);//извлекаем корень
+
+
+            f = (5);
+            double result2 = Math.Pow(f, 3);
+            result2 = Math.Sqrt(e);//извлекаем корень
+
+
+            g = ((1 + f) / 3.5);
+
+            double L = (26 / e + (2 / 3 / 4 / 21) + g);
+
+            Console.WriteLine();
+            //ввод данных
+
+            Console.WriteLine(L);
+            Console.ReadKey();
+
+
+            Console.WriteLine("Задача решена!");
+            //ввод данных
+        }
+    }
+}
+

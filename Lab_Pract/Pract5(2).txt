@@ -1,0 +1,31 @@
+//Практ5(2)
+//Составить программу, которая подсчитывает количество слов во введённой строке согласно условию: первый и последний символ в слове равны. В качестве текста для тестового примера (тестовых примеров) взять не менее пяти предложений.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pr5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите строку:");
+            string input = Console.ReadLine();
+            string[] words = input.Split(' ');
+            int count = 0;
+            foreach (string word in words)
+            {
+                if (word.Length > 1 && word[0] == word[word.Length - 1])
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("Количество слов, удовлетворяющих условию: " + count);
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,46 @@
+//Лаб1
+//Вычислить площадь круга радиуса R. Максимально задействовать имеющиеся в распоряжении функции модуля «Математика».
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Найдем площадь круга)");
+            //ввод данных
+
+            Console.WriteLine("Введите радиус круга");
+            //ввод данных
+
+            Console.WriteLine("R= ");
+            //ввод данных
+
+            double R = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(R);
+
+
+            double S;
+
+
+
+            S = 3.14 * (R * R);
+
+            Console.WriteLine("Мы нашли площадь круга!");
+            //ввод данных
+
+
+            Console.WriteLine(S);
+            Console.ReadKey();
+
+
+            
+        }
+    }
+}
+

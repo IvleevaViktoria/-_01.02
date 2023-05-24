@@ -1,0 +1,87 @@
+//Практ2
+//Уравнение
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Решение уравнения");
+            //ввод данных
+
+
+            Console.WriteLine("Введите значение b= ");
+            //ввод данных
+            double b =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(b);
+
+            Console.WriteLine("Введите значение a= ");
+            //ввод данных
+            double a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(a);
+
+            Console.WriteLine("Введите значение m= ");
+            //ввод данных
+            double m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(m);
+
+            Console.WriteLine("Введите значение n= ");
+            //ввод данных
+            double n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(n);
+
+
+            double Y;
+            double x;
+
+            {
+                
+
+                
+
+                if (m > n)//находим x
+                {
+                    x = m;
+                }
+                else if (n > m)
+                {
+                    x = n;
+                }
+
+
+                else
+                {
+
+                    x = n * Math.Cos(n);
+                }
+
+                int stepen = 2;//воводим в квадрат
+                int c = Convert.ToInt32(Math.Pow(x, stepen));
+                int c1 = Convert.ToInt32(Math.Pow(a, stepen));
+                int c2 = Convert.ToInt32(Math.Pow(b, stepen));
+
+                m = (c1 - b) / (c2 - a);
+
+                double z = c2 + a;
+                double result = Math.Pow(z,2);
+                result = Math.Sqrt(z);//извлекаем корень
+
+                double d = Math.Cos(b);
+
+                Y = (c + b - d) / (z);
+                Console.WriteLine(Y);
+                Console.ReadKey();
+
+
+            }
+        }
+    }
+}
+
